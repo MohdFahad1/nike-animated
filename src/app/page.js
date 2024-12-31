@@ -1,135 +1,25 @@
-"use client";
-
+import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useEffect } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  // useEffect(() => {
-  //   const tl = gsap.timeline();
-
-  //   tl.set(".text", { scale: 1, top: "20%", left: "50%" });
-  //   tl.set(".shoe", { scale: 1, top: "-10%", left: "20%" });
-
-  //   tl.fromTo(".shoe, .text", { scale: 0 }, { scale: 1, duration: 0.8 });
-
-  //   tl.fromTo(
-  //     ".shoe",
-  //     {
-  //       top: "-10%",
-  //       left: "20%",
-  //     },
-  //     {
-  //       top: "72%",
-  //       left: "-12.5%",
-  //       scale: 0.65,
-  //       duration: 0.8,
-  //       rotate: "-30deg",
-  //       scrollTrigger: {
-  //         trigger: ".shoe",
-  //         start: "20% 50%",
-  //         end: "80% -50%",
-  //         markers: true,
-  //         scrub: true,
-  //       },
-  //     }
-  //   );
-
-  //   // Second ScrollTrigger animation
-  //   tl.fromTo(
-  //     ".shoe",
-  //     {
-  //       top: "72%",
-  //       left: "-12.5%",
-  //     },
-  //     {
-  //       top: "205%",
-  //       left: "6%",
-  //       rotate: "90deg",
-  //       duration: 0.8,
-  //       scrollTrigger: {
-  //         trigger: ".shoe",
-  //         start: "50% 20%",
-  //         end: "150% -80%",
-  //         markers: true,
-  //         scrub: true,
-  //       },
-  //     }
-  //   );
-
-  //   return () => {
-  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  //   };
-  // }, []);
-
   return (
     <div>
       <Navbar />
+      <Hero />
 
-      {/* HERO */}
-      <div className="relative h-screen">
-        <Image
-          src={"/shoe.png"}
-          alt="shoe"
-          height={800}
-          width={800}
-          className="absolute z-10 -rotate-45 shoe left-[20%] -top-[10%]"
-        />
-
-        <Image
-          src={"/logo.jpg"}
-          alt="logo"
-          height={80}
-          width={80}
-          className="absolute mix-blend-multiply top-36 left-[350px]"
-        />
-        <h1 className="text-[200px] font-bold absolute top-40 left-1/2 -translate-x-1/2 -z-10 text">
-          AIRMAX
-        </h1>
-        <button className="w-24 h-24 border-[0.1px] border-gray-500 rounded-full absolute top-1/2 left-[20%] z-30 bg-[#f1f1f1]">
-          PLAY
-        </button>
-
-        {/* shoes boxes */}
-        <div className="absolute flex gap-2 right-14 bottom-20">
-          <div className="relative h-24 border-2 border-black w-44">
-            <Image src={"/shoe.png"} alt="shoe" fill objectFit="cover" />
-          </div>
-          <div className="relative h-24 border-2 border-black w-44">
-            <Image src={"/shoe.png"} alt="shoe" fill objectFit="cover" />
-          </div>
-        </div>
-
-        <p className="text-[10px] uppercase absolute bottom-20 left-14">
-          &copy; 2024, All rights reserved
-        </p>
-
-        <div className="absolute flex flex-col items-center -translate-x-1/2 bottom-20 left-1/2">
-          <p className="text-[10px] uppercase animate-bounce">
-            Scroll to discover
-          </p>
-          <div className="h-14 w-[0.5px] bg-gray-600"></div>
-        </div>
-      </div>
-
-      {/* PRODUCTS */}
-      <div className="flex items-center justify-around h-screen overflow-x-hidden">
-        {/* BOX 1 */}
+      {/* <div className="flex items-center justify-around h-screen overflow-x-hidden">
+        
         <div className="relative h-[500px] w-[350px] bg-white rounded-lg">
-          {/* Sloped Blue Background */}
+          
           <div
             className="absolute bottom-0 left-0 w-full h-[300px] bg-blue-200"
             style={{
               clipPath: "polygon(0 23%, 100% 0, 100% 100%, 0% 100%)",
             }}
-          />
+          /> */}
 
-          {/* Your content (text + buttons), placed above the slope */}
-          <div className="absolute bottom-0 left-0 flex flex-col justify-center w-full p-5">
+      {/* <div className="absolute bottom-0 left-0 flex flex-col justify-center w-full p-5">
             <ul className="mt-5 text-lg list-disc">
               <li>Color Shown: Wolf Grey/Photon Dust/Metallic Platinum</li>
               <li>Style: DD9682-005</li>
@@ -146,7 +36,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* BOX 2 */}
+     
         <div className="relative h-[500px] w-[350px] bg-white rounded-lg">
           <div className="h-[500px] w-[500px] absolute -top-44 -left-28">
             <Image
@@ -156,7 +46,7 @@ export default function Home() {
               className="-rotate-[30deg]"
             />
           </div>
-          {/* Sloped green Background */}
+       
           <div
             className="absolute bottom-0 left-0 w-full h-[300px] bg-green-300"
             style={{
@@ -164,7 +54,7 @@ export default function Home() {
             }}
           />
 
-          {/* Your content (text + buttons), placed above the slope */}
+       
           <div className="absolute bottom-0 left-0 flex flex-col justify-center w-full p-5">
             <ul className="mt-5 text-lg list-disc">
               <li>Color Shown: Wolf Grey/Photon Dust/Metallic Platinum</li>
@@ -182,9 +72,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* BOX 3 */}
+
         <div className="relative h-[500px] w-[350px] bg-white rounded-lg">
-          {/* Sloped brown Background */}
+       
           <div className="h-[500px] w-[500px] absolute -top-44 -left-28">
             <Image
               src={"/shoe.png"}
@@ -200,7 +90,7 @@ export default function Home() {
             }}
           />
 
-          {/*content (text + buttons), placed above the slope */}
+     
           <div className="absolute bottom-0 left-0 flex flex-col justify-center w-full p-5">
             <ul className="mt-5 text-lg list-disc">
               <li>Color Shown: Wolf Grey/Photon Dust/Metallic Platinum</li>
@@ -217,9 +107,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {/* ABOUT */}
       <div className="flex items-center h-screen">
         {/* BIG IMAGES */}
         <div className="w-1/2">
