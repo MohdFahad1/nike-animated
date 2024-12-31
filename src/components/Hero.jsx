@@ -3,9 +3,52 @@ import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FiPlus } from "react-icons/fi";
 
+const images = [
+  {
+    url: "/adidas.png",
+    height: 70,
+    width: 70,
+  },
+  {
+    url: "/puma.jpg",
+    height: 60,
+    width: 60,
+  },
+  {
+    url: "/adidas.png",
+    height: 70,
+    width: 70,
+  },
+  {
+    url: "/puma.jpg",
+    height: 60,
+    width: 60,
+  },
+  {
+    url: "/adidas.png",
+    height: 70,
+    width: 70,
+  },
+  {
+    url: "/puma.jpg",
+    height: 60,
+    width: 60,
+  },
+  {
+    url: "/adidas.png",
+    height: 70,
+    width: 70,
+  },
+  {
+    url: "/puma.jpg",
+    height: 60,
+    width: 60,
+  },
+];
+
 const Hero = () => {
   return (
-    <main className="pt-12 px-14">
+    <main className="pt-12 pb-10 px-14">
       <div className="flex items-center gap-10">
         <div>
           <div className="relative h-10">
@@ -49,7 +92,7 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="absolute right-0 z-10 flex items-center bottom-16">
+          <div className="absolute z-10 flex items-center right-6 bottom-20">
             <button className="flex items-center justify-center text-black bg-white rounded-full w-7 h-7">
               <FiPlus size={20} />
             </button>
@@ -62,18 +105,30 @@ const Hero = () => {
             alt="shoe"
             height={500}
             width={500}
-            className="absolute top-0 right-24"
+            className="absolute -top-5 right-24"
           />
           <Image
             src={"/shoe.png"}
             alt="shoe"
             height={500}
             width={500}
-            className="absolute -rotate-45 top-32 right-5"
+            className="absolute -rotate-45 top-28 right-5"
           />
         </div>
       </div>
-      <div></div>
+      <div className="flex items-center justify-between mt-10">
+        {images.map((image, index) => (
+          <div key={index}>
+            <Image
+              src={image.url}
+              alt="brand"
+              height={image.height}
+              width={image.width}
+              className="mix-blend-multiply"
+            />
+          </div>
+        ))}
+      </div>
     </main>
   );
 };
