@@ -3,7 +3,7 @@ import React from "react";
 
 const Category = () => {
   return (
-    <div className="min-h-screen py-14 px-14">
+    <div className="min-h-screen py-20 px-14">
       <div className="flex items-start justify-between">
         <h1 className="text-4xl font-semibold capitalize">
           perfect fit for <br />

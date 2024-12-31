@@ -4,7 +4,7 @@ import { CgProfile } from "react-icons/cg";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between pt-3 pb-2 px-14">
+    <nav className="sticky top-0 z-50 flex items-center justify-between pt-3 pb-2 px-14">
       <h1 className="text-2xl italic font-bold cursor-pointer">StrideX</h1>
 
       <ul className="flex items-center gap-8 px-4 py-1 bg-gray-200 rounded-full">
