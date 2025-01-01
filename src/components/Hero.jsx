@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FiPlus } from "react-icons/fi";
+import { shoeAnimation } from "@/utils/animation";
 
 const images = [
   {
@@ -47,6 +50,15 @@ const images = [
 ];
 
 const Hero = () => {
+  useEffect(() => {
+    const animationInstance = shoeAnimation();
+
+    return () => {
+      if (animationInstance && typeof animationInstance.kill === "function") {
+        animationInstance.kill();
+      }
+    };
+  }, []);
   return (
     <main className="pt-12 pb-10 px-14">
       <div className="flex items-center gap-10">
@@ -112,7 +124,7 @@ const Hero = () => {
             alt="shoe"
             height={500}
             width={500}
-            className="absolute -rotate-45 top-28 right-5"
+            className="absolute -rotate-45 top-[20%] right-[3%] shoe z-30 scale-1"
           />
         </div>
       </div>
