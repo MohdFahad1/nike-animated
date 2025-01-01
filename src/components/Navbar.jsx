@@ -43,12 +43,13 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between pt-3 pb-2 opacity-0 px-14 navbar">
-      <h1
+      <Link
+        href={"#home"}
         className="text-2xl italic font-bold cursor-pointer"
         onClick={scrollToTop}
       >
         StrideX
-      </h1>
+      </Link>
 
       <ul className="flex items-center gap-8 px-4 py-1 bg-gray-200 rounded-full">
         {links.map((link, index) => (

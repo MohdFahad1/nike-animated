@@ -41,32 +41,35 @@ const Offer = () => {
         </div>
 
         <div className="flex gap-10 mt-5">
-          <Image
-            src={"/men1.jpeg"}
-            alt="man"
-            height={200}
-            width={200}
-            className="rounded-[45px]"
-          />
-          <Image
-            src={"/men1.jpeg"}
-            alt="man"
-            height={200}
-            width={200}
-            className="rounded-[45px]"
-          />
-          <Image
-            src={"/men1.jpeg"}
-            alt="man"
-            height={200}
-            width={200}
-            className="rounded-[45px]"
-          />
+          {["/offer-shoe2.jpg", "/offer-shoe1.jpg", "/offer-shoe3.jpg"].map(
+            (src, index) => (
+              <div
+                key={index}
+                className="rounded-[45px] overflow-hidden relative h-[200px] w-[200px]"
+              >
+                <Image
+                  src={src}
+                  alt={`shoe ${index + 1}`}
+                  fill
+                  objectFit="cover"
+                  className="absolute"
+                />
+              </div>
+            )
+          )}
         </div>
       </div>
       <div className="border-4 rounded-[50px] p-[2px]">
         <div className="h-[85vh] relative w-[450px] rounded-[50px] overflow-hidden">
-          <Image src={"/men1.jpeg"} alt="men" fill objectFit="cover" />
+          <video
+            className="absolute object-cover w-full h-full"
+            autoPlay
+            loop
+            muted
+          >
+            <source src="/video.mp4" type="video/mp4" />
+            Your browser does not support the video.
+          </video>
         </div>
       </div>
     </div>
