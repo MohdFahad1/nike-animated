@@ -1,5 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+
+const images = [
+  "/image1.jpg",
+  "/image4.jpg",
+  "/image2.webp",
+  "/image5.jpg",
+  "/image3.jpg",
+  "/image6.jpg",
+];
 
 const Slider = () => {
   return (
@@ -15,20 +29,24 @@ const Slider = () => {
           stride.
         </p>
       </div>
-      <div className="flex items-center justify-between mt-10">
-        <div className="h-[400px] relative w-[260px] rounded-[50px] overflow-hidden">
-          <Image src={"/men1.jpeg"} alt="men" fill objectFit="cover" />
-        </div>
-        <div className="h-[400px] relative w-[260px] rounded-[50px] overflow-hidden">
-          <Image src={"/men1.jpeg"} alt="men" fill objectFit="cover" />
-        </div>
-        <div className="h-[400px] relative w-[260px] rounded-[50px] overflow-hidden">
-          <Image src={"/men1.jpeg"} alt="men" fill objectFit="cover" />
-        </div>
-        <div className="h-[400px] relative w-[260px] rounded-[50px] overflow-hidden">
-          <Image src={"/men1.jpeg"} alt="men" fill objectFit="cover" />
-        </div>
-      </div>
+      <Swiper
+        spaceBetween={10}
+        slidesPerView={4.5}
+        onSlideChange={() => console.log("Slide Changed")}
+        onSwiper={(swiper) => console.log(swiper)}
+        className="flex items-center justify-between mt-10"
+      >
+        {images.map((image, index) => (
+          <SwiperSlide>
+            <div
+              className="h-[400px] relative w-[260px] rounded-[50px] overflow-hidden  border-gray-200 border-4"
+              key={index}
+            >
+              <Image src={image} alt="image" fill objectFit="cover" />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };
