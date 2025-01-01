@@ -1,10 +1,16 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import { IoBagOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
+import { navbarAnimation } from "@/utils/animation";
 
 const Navbar = () => {
+  useEffect(() => {
+    navbarAnimation();
+  });
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between pt-3 pb-2 px-14">
+    <nav className="sticky top-0 z-50 flex items-center justify-between pt-3 pb-2 opacity-0 px-14 navbar">
       <h1 className="text-2xl italic font-bold cursor-pointer">StrideX</h1>
 
       <ul className="flex items-center gap-8 px-4 py-1 bg-gray-200 rounded-full">
