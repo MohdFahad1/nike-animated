@@ -28,16 +28,24 @@ const Category = () => {
             className="duration-500 group-hover:scale-[1.2]"
           />
         </div>
-        <div className="h-[480px] w-[350px] rounded-[55px] bg-[#f0a370] relative overflow-hidden group">
+        <div className="h-[480px] w-[350px] rounded-[55px] bg-[#f0a370] relative overflow-hidden">
           <span className="absolute z-10 px-4 py-1 font-medium capitalize bg-white rounded-full bottom-5 left-10">
             women
           </span>
-          <Image
+          {/* <Image
             src={"/women.jpg"}
             alt="man"
             objectFit="cover"
             fill
             className="duration-500 group-hover:scale-[1.2]"
+          /> */}
+
+          <Image
+            src={"/women.jpg"}
+            alt="women"
+            objectFit="cover"
+            fill
+            className="duration-500 -scale-x-100"
           />
           {/* <Image
             src={"/shoe.png"}

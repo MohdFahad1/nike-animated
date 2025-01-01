@@ -15,28 +15,35 @@ export const navbarAnimation = () => {
 export const shoeAnimation = () => {
   const shoe = document.querySelector(".shoe");
 
-  const tl = gsap.timeline();
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: shoe,
+      start: "top 0%",
+      end: "200% -10%",
+      scrub: 1,
+    },
+  });
 
   if (shoe) {
     tl.set(shoe, {
       rotate: -45,
       top: "20%",
       right: "3%",
-    });
-
-    tl.to(shoe, {
-      duration: 0.7,
-      scale: 0.8,
-      top: "150%",
-      right: "130%",
-      scrollTrigger: {
-        trigger: shoe,
-        start: "top 0%",
-        end: "bottom 0%",
-        markers: true,
-        scrub: 1,
-      },
-    });
+      scale: 1,
+    })
+      .to(shoe, {
+        duration: 0.6,
+        scale: 0.8,
+        top: "150%",
+        right: "130%",
+      })
+      .to(shoe, {
+        duration: 0.6,
+        rotate: -60,
+        top: "340%",
+        right: "63%",
+        scale: 0.18,
+      });
   }
 
   return tl;
