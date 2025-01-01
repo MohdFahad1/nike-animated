@@ -19,7 +19,7 @@ export const shoeAnimation = () => {
     scrollTrigger: {
       trigger: shoe,
       start: "top 0%",
-      end: "200% -10%",
+      end: "220% -10%",
       scrub: 1,
     },
   });
@@ -34,13 +34,13 @@ export const shoeAnimation = () => {
       .to(shoe, {
         duration: 0.6,
         scale: 0.8,
-        top: "150%",
-        right: "136%",
+        top: "163%",
+        right: "137%",
       })
       .to(shoe, {
         duration: 0.6,
         rotate: -60,
-        top: "340%",
+        top: "372%",
         right: "68%",
         scale: 0.18,
       });
