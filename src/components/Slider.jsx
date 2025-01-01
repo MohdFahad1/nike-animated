@@ -36,8 +36,6 @@ const Slider = () => {
       <Swiper
         spaceBetween={10}
         slidesPerView={4.5}
-        onSlideChange={() => console.log("Slide Changed")}
-        onSwiper={(swiper) => console.log(swiper)}
         className="flex items-center justify-between mt-10"
       >
         {images.map((image, index) => (

@@ -69,7 +69,6 @@ export const textAnimation = () => {
         trigger: parent,
         start: "top 50%",
         end: "55% 50%",
-        markers: true,
         scrub: 1,
       },
     });
