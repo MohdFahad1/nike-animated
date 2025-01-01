@@ -4,7 +4,10 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Offer = () => {
   return (
-    <div className="flex items-start justify-between min-h-screen px-24 py-10">
+    <div
+      className="flex items-start justify-between min-h-screen px-24 pt-20 pb-10"
+      id="offer"
+    >
       <div>
         <h1 className="text-5xl leading-[55px] capitalize">
           limited edition <br />

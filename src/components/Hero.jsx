@@ -60,7 +60,7 @@ const Hero = () => {
     };
   }, []);
   return (
-    <main className="pt-12 pb-10 px-14">
+    <main className="pt-12 pb-10 px-14" id="home">
       <div className="flex items-center gap-10">
         <div>
           <div className="relative h-10">

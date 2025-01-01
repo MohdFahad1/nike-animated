@@ -17,7 +17,7 @@ const images = [
 
 const Slider = () => {
   return (
-    <div className="py-10 px-14">
+    <div className="pt-20 pb-10 px-14" id="slider">
       <div className="flex flex-col items-center justify-center text-center capitalize">
         <h1 className="w-1/2 text-5xl font-semibold leading-[52px]">
           Setup up your game with strideX performance shoes

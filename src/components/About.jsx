@@ -5,7 +5,10 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const About = () => {
   return (
-    <div className="relative flex items-start gap-32 px-24 py-20 bg-gray-200">
+    <div
+      className="relative flex items-start gap-32 px-24 py-20 bg-gray-200"
+      id="about"
+    >
       {/* Gray Box */}
       <div className="bg-gray-300 rounded-[35px] h-[420px] w-[500px] z-10 relative"></div>
 
