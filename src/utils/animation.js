@@ -35,13 +35,13 @@ export const shoeAnimation = () => {
         duration: 0.6,
         scale: 0.8,
         top: "150%",
-        right: "130%",
+        right: "136%",
       })
       .to(shoe, {
         duration: 0.6,
         rotate: -60,
         top: "340%",
-        right: "63%",
+        right: "68%",
         scale: 0.18,
       });
   }

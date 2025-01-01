@@ -70,7 +70,7 @@ const Hero = () => {
               new 2024 collections
             </p>
           </div>
-          <h1 className="mt-16 font-semibold capitalize text-7xl">
+          <h1 className="mt-16 font-semibold capitalize text-7xl w-[110%]">
             Elevate your <br />
             performance{" "}
             <span className="text-orange-500">

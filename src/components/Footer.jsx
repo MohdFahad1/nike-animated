@@ -67,7 +67,7 @@ const Footer = () => {
         <p className="font-medium capitalize">
           Join the strideX community and experience footwear that redefines
           excellence. stay connected with us for exclusive offers, new releases,
-          and more.
+          and.
         </p>
         <div className="flex gap-3">
           {icons.map((icon, index) => (

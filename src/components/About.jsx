@@ -7,14 +7,14 @@ const About = () => {
   return (
     <div className="relative flex items-start gap-32 px-24 py-20 bg-gray-200">
       {/* Gray Box */}
-      <div className="bg-gray-300 rounded-[35px] h-[420px] w-[400px] z-10 relative"></div>
+      <div className="bg-gray-300 rounded-[35px] h-[420px] w-[500px] z-10 relative"></div>
 
       {/* Orange Boxes */}
       <div className="bg-orange-500 h-[150px] w-[150px] rounded-[35px] absolute top-[7.5%] left-[25%] z-0"></div>
       <div className="bg-orange-500 h-[150px] w-[150px] rounded-[35px] absolute bottom-[7.5%] left-[4%] z-0"></div>
 
-      <div className="w-1/2">
-        <h1 className="text-6xl font-bold">
+      <div className="w-[70%] ml-10 ">
+        <h1 className="text-6xl font-bold w-[]">
           Discover the ultimate comfort &amp; style
         </h1>
 
