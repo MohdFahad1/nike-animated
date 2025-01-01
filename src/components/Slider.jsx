@@ -39,11 +39,8 @@ const Slider = () => {
         className="flex items-center justify-between mt-10"
       >
         {images.map((image, index) => (
-          <SwiperSlide>
-            <div
-              className="h-[400px] relative w-[260px] rounded-[50px] overflow-hidden  border-gray-200 border-4"
-              key={index}
-            >
+          <SwiperSlide key={index}>
+            <div className="h-[400px] relative w-[260px] rounded-[50px] overflow-hidden  border-gray-200 border-4">
               <Image src={image} alt="image" fill objectFit="cover" />
             </div>
           </SwiperSlide>

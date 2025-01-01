@@ -4,10 +4,10 @@ import { FaMeta, FaInstagram, FaYoutube, FaPinterestP } from "react-icons/fa6";
 
 const Footer = () => {
   const icons = [
-    <FaMeta size={22} />,
-    <FaInstagram size={22} />,
-    <FaYoutube size={22} />,
-    <FaPinterestP size={22} />,
+    <FaMeta size={22} key="meta" />,
+    <FaInstagram size={22} key="instagram" />,
+    <FaYoutube size={22} key="youtube" />,
+    <FaPinterestP size={22} key="pinterest" />,
   ];
 
   return (
@@ -38,7 +38,7 @@ const Footer = () => {
           <ul className="flex flex-col gap-2">
             <span className="mb-2 text-lg font-semibold">About</span>
             <li>Help Center</li>
-            <li>FAQ&apos;s</li>
+            <li>FAQ's</li>
             <li>Contact Us</li>
             <li>Store</li>
             <li>Terms &amp; Conditions</li>
@@ -62,17 +62,18 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+
       <div className="flex flex-col w-1/2 gap-5">
         <h1 className="text-6xl italic font-bold">StrideX</h1>
         <p className="font-medium capitalize">
           Join the strideX community and experience footwear that redefines
-          excellence. stay connected with us for exclusive offers, new releases,
-          and.
+          excellence. Stay connected with us for exclusive offers and new
+          releases.
         </p>
         <div className="flex gap-3">
-          {icons.map((icon, index) => (
+          {icons.map((icon) => (
             <button
-              key={index}
+              key={icon.key}
               className="flex items-center justify-center w-8 h-8 text-white bg-black rounded-full"
             >
               {icon}
