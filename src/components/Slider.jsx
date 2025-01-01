@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
+import { textAnimation } from "@/utils/animation";
 
 const images = [
   "/image1.jpg",
@@ -16,13 +17,16 @@ const images = [
 ];
 
 const Slider = () => {
+  useEffect(() => {
+    textAnimation();
+  }, []);
   return (
     <div className="pt-20 pb-10 px-14" id="slider">
       <div className="flex flex-col items-center justify-center text-center capitalize">
-        <h1 className="w-1/2 text-5xl font-semibold leading-[52px]">
+        <h1 className="w-1/2 text-5xl font-semibold leading-[52px] text opacity-0">
           Setup up your game with strideX performance shoes
         </h1>
-        <p className="w-1/2 mt-5 font-medium text-gray-500 ">
+        <p className="w-1/2 mt-5 font-medium text-gray-500 opacity-0 text">
           experience the difference with shoes that offer unparalleled
           cushioning,
           <br /> support, and breathability. elevate your style with every

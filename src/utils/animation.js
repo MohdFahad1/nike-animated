@@ -48,3 +48,30 @@ export const shoeAnimation = () => {
 
   return tl;
 };
+
+export const textAnimation = () => {
+  const text = document.querySelectorAll(".text");
+  const parent = document.querySelector("#slider");
+
+  if (text && parent) {
+    gsap.set(text, {
+      opacity: 0,
+      y: -100,
+    });
+
+    gsap.to(text, {
+      duration: 0.7,
+      opacity: 1,
+      delay: 0.5,
+      y: 0,
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: parent,
+        start: "top 50%",
+        end: "55% 50%",
+        markers: true,
+        scrub: 1,
+      },
+    });
+  }
+};
