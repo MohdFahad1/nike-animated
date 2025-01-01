@@ -38,7 +38,7 @@ const Footer = () => {
           <ul className="flex flex-col gap-2">
             <span className="mb-2 text-lg font-semibold">About</span>
             <li>Help Center</li>
-            <li>FAQ's</li>
+            <li>FAQ&apos;s</li>
             <li>Contact Us</li>
             <li>Store</li>
             <li>Terms &amp; Conditions</li>
